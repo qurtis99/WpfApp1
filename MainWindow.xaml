@@ -1,12 +1,47 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="DPGI2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:DPGI2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+
+    <Grid ShowGridLines="True">
+        <!-- Розмітка сітки: 3 рядки та 3 колонки -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Перший рядок: 1 частина -->
+            <RowDefinition Height="4*"/>
+            <!-- Другий рядок: 4 частини -->
+            <RowDefinition Height="Auto"/>
+            <!-- Третій рядок: автоматична висота -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Label у 2 колонці, 1 рядок -->
+        <Label Grid.Row="0" Grid.Column="1" 
+               Content="Label" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center"/>
+
+        <!-- TextBox на всю ширину другого рядка (Grid.Row=1), всі 3 колонки -->
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                 Text="TextBox" 
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Stretch"
+                 HorizontalAlignment="Stretch"
+                 Margin="5"/>
+
+        <!-- Button у 2 колонці, 3 рядок -->
+        <Button Grid.Row="2" Grid.Column="1"
+                Content="Button"
+                Width="150" Height="30"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
     </Grid>
 </Window>
