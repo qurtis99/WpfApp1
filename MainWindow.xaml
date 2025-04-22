@@ -5,43 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DPGI2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-
-    <Grid ShowGridLines="True">
-        <!-- Розмітка сітки: 3 рядки та 3 колонки -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <!-- Перший рядок: 1 частина -->
-            <RowDefinition Height="4*"/>
-            <!-- Другий рядок: 4 частини -->
-            <RowDefinition Height="Auto"/>
-            <!-- Третій рядок: автоматична висота -->
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <!-- Label у 2 колонці, 1 рядок -->
-        <Label Grid.Row="0" Grid.Column="1" 
-               Content="Label" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Center"/>
-
-        <!-- TextBox на всю ширину другого рядка (Grid.Row=1), всі 3 колонки -->
-        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                 Text="TextBox" 
-                 TextWrapping="Wrap"
-                 VerticalAlignment="Stretch"
-                 HorizontalAlignment="Stretch"
-                 Margin="5"/>
-
-        <!-- Button у 2 колонці, 3 рядок -->
-        <Button Grid.Row="2" Grid.Column="1"
-                Content="Button"
-                Width="150" Height="30"
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"/>
-    </Grid>
+        Title="Form Window" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
+        <Label Content="Label" FontSize="18" FontWeight="SemiBold" Foreground="#FF333333" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+        <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
+        <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
+        <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
+        <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
+        <Button Content="Button" FontSize="14" Width="550" Height="30" Margin="0,30,0,0" Background="#FF999999" Foreground="White" BorderThickness="0"/>
+    </StackPanel>
 </Window>
