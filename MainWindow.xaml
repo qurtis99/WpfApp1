@@ -12,6 +12,6 @@
         <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
         <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
         <TextBox Text="TextBox" FontSize="14" Width="550" Height="28" Margin="0,5" BorderBrush="#FF999999" BorderThickness="1"/>
-        <Button Content="Button" FontSize="14" Width="550" Height="30" Margin="0,30,0,0" Background="#FF999999" Foreground="White" BorderThickness="0"/>
+        <Button Content="Button" FontSize="14" Width="550" Height="30" Margin="0,30,0,0" Background="Gray" Foreground="White" BorderThickness="0"/>
     </StackPanel>
 </Window>
