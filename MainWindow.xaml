@@ -5,10 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DPGI2"
         mc:Ignorable="d"
-        Title="Simple Canvas Form" Height="480" Width="820">
-    <Canvas Background="LightBlue">
-        <Label Content="Label:" FontSize="14" FontWeight="SemiBold" Foreground="#FF333333" Canvas.Left="30" Canvas.Top="30"/>
-        <TextBox Text="Text" TextWrapping="Wrap" Width="150" Height="25" Canvas.Left="50" Canvas.Top="60" BorderBrush="#FF999999" BorderThickness="1"/>
-        <Button Content="Button" Width="80" Height="30" Canvas.Left="70" Canvas.Top="100" Background="#FF0288D1" Foreground="White" BorderThickness="0"/>
-    </Canvas>
+        Title="TextEditor" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Width="40" Height="40" Margin="5" ToolTip="Open">
+                    <Image Source="C:\Users\qurtis\Pictures\Saved Pictures/open_icon.png" Width="24" Height="24"/>
+                </Button>
+                <Button Width="40" Height="40" Margin="5" ToolTip="Clear">
+                    <Image Source="C:\Users\qurtis\Pictures\Saved Pictures/clear_icon.png" Width="24" Height="24"/>
+                </Button>
+                <Button Width="40" Height="40" Margin="5" ToolTip="Copy">
+                    <Image Source="C:\Users\qurtis\Pictures\Saved Pictures/copy_icon.png" Width="24" Height="24"/>
+                </Button>
+                <Button Width="40" Height="40" Margin="5" ToolTip="Paste">
+                    <Image Source="C:\Users\qurtis\Pictures\Saved Pictures/paste_icon.png" Width="24" Height="24"/>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBox Grid.Row="0" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="10"/>
+
+                <DockPanel Grid.Row="1" Margin="10">
+                    <Button Content="OK" Width="80" Height="30" DockPanel.Dock="Bottom" HorizontalAlignment="Right" Background="#FF4CAF50" Foreground="White" BorderThickness="0"/>
+                </DockPanel>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
